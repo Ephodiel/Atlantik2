@@ -26,7 +26,7 @@ class Visiteur extends BaseController
         /* VALIDATION DU FORMULAIRE */
         $reglesValidation = [ // Régles de validation
         'txtMel' => 'required',
-        'txtMotDePasse' => 'required',
+        'txtMotDePasse' => 'required',//dfggg
         ];
         if (!$this->validate($reglesValidation)) {
             /* formulaire non validé */
