@@ -44,7 +44,7 @@ class Visiteur extends BaseController
         $modUtilisateur = new ModeleUtilisateur(); // instanciation modèle
         $condition = ['MEL'=>$Mel,'MOTDEPASSE'=>$MdP];
         $utilisateurRetourne = $modUtilisateur->where($condition)->first();
-        /* where : méthode, QueryBuilder, héritée de Model (), retourne,
+        /* where : méthode, QueryBuilder, héritée de Model (), retourne,sgithub
         ici sous forme d'un objet, le résultat de la requête :
         SELECT * FROM utilisateur  WHERE identifiant='$pId' and motdepasse='$MotdePasse
         utilisateurRetourne = objet utilisateur ($returnType = 'object')
@@ -68,6 +68,7 @@ class Visiteur extends BaseController
             . view('Templates/Footer');
         }
     }
+
 
 
     public function seDeconnecter()
@@ -115,12 +116,19 @@ class Visiteur extends BaseController
             . view('Templates/Footer');
         }
 
-        
 
 
 
     } // Fin voirLesProduits
 
+    public function accueil()
+    {
+
+    return view('Templates/Header')
+    
+    .view('Visiteur/vue_accueil')
+    .view('Templates/Footer');
+    }
 
 
 }
